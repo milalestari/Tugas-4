@@ -185,6 +185,33 @@ public class ItemPakaian {
     public abstract String getDetail();
 }
 
+public class Kemeja extends ItemPakaian {
+
+    // Constructor, Getter, Setter, dan metode lainnya
+    
+    @Override
+    public double hitungHargaSetelahDiskon() {
+        return getHarga() * (1 - (getDiskon() / 100));
+    }
+
+    @Override
+    public void tampilkanDetailPakaian() {
+        System.out.println("Detail Kemeja:");
+        // Tampilkan detail kemeja 
+    }
+    
+    @Override
+    public String getJenisPakaian() {
+        return "kemeja";
+    }
+    
+    @Override
+    public String getDetail() {
+        // Kembalikan detail spesifik untuk Kemeja
+        return "kemeja";
+    }
+}
+
 /**
  * Kelas MainDiskonPakaian adalah kelas main tempat program aplikasi dijalankan
  */
