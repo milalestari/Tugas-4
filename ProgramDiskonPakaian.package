@@ -276,7 +276,7 @@ public class MainDiskonPakaian {
     private boolean play;
     public Scanner s = new Scanner(System.in);      //scanner input
     private DetailPakaian detailPakaian = new DetailPakaian();
-    ItemPakaian item = new ItemPakaian();
+
     /*
      * constructor MainDiskonPakaian
      */
@@ -291,7 +291,10 @@ public class MainDiskonPakaian {
     public void mulaikan() {
         Pelanggan pelanggan;
         JenisPakaian jenis;
-        
+        ItemPakaian kemeja = new Kemeja();
+        ItemPakaian blouse = new Blouse();
+        ItemPakaian gamis = new Gamis();
+
         // Tamppilan
         System.out.println("\n========================================");
         System.out.println("---- <-EM~Shop Siap Melayani Anda-> ----");
@@ -344,22 +347,26 @@ public class MainDiskonPakaian {
         System.out.println("\t2. Blouse");
         System.out.println("\t3. Gamis");
         System.out.print("Silahkan pilih yang anda inginkan: ");
-        item.tampilkanDetailPakaian();
         int jenisPakaianOption = this.s.nextInt();
         this.s.nextLine();
+        // Menggunakan objek Kemeja, Blouse, atau Gamis sesuai dengan pilihan
+        ItemPakaian itemPakaian;
         String jenisPakaian;
         while (true) {
             switch (jenisPakaianOption) {
                 case 1:
                     jenisPakaian = "Kemeja";
+                    itemPakaian = kemeja;
                     detailPakaian.tampilkanDetailKemeja();
                     break;
                 case 2:
                     jenisPakaian = "Blouse";
+                    itemPakaian = blouse;
                     detailPakaian.tampilkanDetailBlouse();
                     break;
                 case 3:
                     jenisPakaian = "Gamis";
+                    itemPakaian = gamis;
                     detailPakaian.tampilkanDetailGamis();
                     break;
                 default:
@@ -375,7 +382,7 @@ public class MainDiskonPakaian {
         System.out.print("Pilih model " + jenisPakaian + " yang anda inginkan (1/2/3): ");
         int kategori = s.nextInt();
         s.nextLine();
-        double harga = calculatePrice(jenisPakaian, kategori);
+        double harga = calculatePrice(itemPakaian, kategori);
             if (kategori == 3) {
                 System.out.println("\n+---------------------------------------------+");
                 System.out.println("\n\tYahh... Produk tidak sedang diskon.");
@@ -431,7 +438,8 @@ public class MainDiskonPakaian {
         }           
     } 
     
-    private static double calculatePrice(String jenisPakaian, int kategori) {
+    private static double calculatePrice(ItemPakaian itemPakaian, int kategori) {
+        String jenisPakaian = itemPakaian.getJenisPakaian().toLowerCase();
         double harga;
         switch (jenisPakaian.toLowerCase()) {
             case "kemeja":
