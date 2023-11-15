@@ -60,4 +60,42 @@ public class JenisPakaian {
     }    
 }
 
+/**
+ * Kelas DetailPakaian dapat digunakan untuk menampilkan detail dari setiap jenis pakaian.
+ */
+public class DetailPakaian {
+
+    /**
+     * Menampilkan detail dari suatu jenis pakaian.
+     * @param jenisPakaian Jenis pakaian yang detailnya akan ditampilkan.
+     */
+    public void tampilkanDetailPakaian(String jenisPakaian) {
+        // Menampilkan detail dari suatu jenis pakaian
+    }
+
+    /**
+     * Metode untuk menampilkan detail kemeja.
+     */
+    public void tampilkanDetailKemeja() {
+        System.out.println();
+        // Menampilkan detail kemeja
+    }
+
+    /**
+     * Metode untuk menampilkan detail blouse.
+     */
+    public void tampilkanDetailBlouse() {
+        System.out.println();
+        // Menampilkan detail blouse
+    }
+
+    /**
+     * Metode untuk menampilkan detail gamis.
+     */
+    public void tampilkanDetailGamis() {
+        System.out.println();
+        // Menampilkan detail gamis
+    }
+}
+
 
