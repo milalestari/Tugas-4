@@ -180,7 +180,7 @@ public class ItemPakaian {
 }
 
 /**
- * Kelas MainApp adalah kelas main tempat program aplikasi dijalankan
+ * Kelas MainDiskonPakaian adalah kelas main tempat program aplikasi dijalankan
  */
 
 import java.util.Scanner;
@@ -191,7 +191,7 @@ public class MainDiskonPakaian {
     private DetailPakaian detailPakaian = new DetailPakaian();
     ItemPakaian item = new ItemPakaian();
     /*
-     * constructor MainApp
+     * constructor MainDiskonPakaian
      */
     public MainDiskonPakaian() {
     }
