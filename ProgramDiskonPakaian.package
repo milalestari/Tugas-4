@@ -98,4 +98,84 @@ public class DetailPakaian {
     }
 }
 
+/**
+ * Kelas ItemPakaian merepresentasikan sebuah item pakaian yang dipilih oleh pelanggan.
+ */
+public class ItemPakaian {
+    private String nama;    // Nama dari item pakaian
+    private double harga;   // Harga dari item pakaian
+    private double diskon;  // Besaran diskon dari item pakaian
+    
+    /**
+     * Konstruktor untuk membuat objek ItemPakaian dengan nama dan harga tertentu.
+     */
+    public ItemPakaian() {
+        this.nama = "";     // Set nama awal menjadi string kosong
+        this.harga = 0.0;   // Set harga awal menjadi 0.0
+        this.diskon = 0.0;  // Set diskon awal menjadi 0.0
+    }
+
+    /**
+     * Mendapatkan nama item pakaian.
+     * @return Nama dari item pakaian.
+     */
+    public String getNama() {
+        return nama;    // Mengembalikan nama item pakaian
+    }
+
+    /**
+     * Mengatur nama item pakaian.
+     * @param nama Nama baru dari item pakaian.
+     */
+    public void setNama(String nama) {
+        this.nama = nama;   // Mengatur nama baru dari item pakaian
+    }
+
+    /**
+     * Mendapatkan harga item pakaian.
+     * @return Harga dari item pakaian.
+     */
+    public double getHarga() {
+        return harga;   // Mengembalikan harga item pakaian
+    }
+
+    /**
+     * Mengatur harga item pakaian.
+     * @param harga Harga baru dari item pakaian.
+     */
+    public void setHarga(double harga) {
+        this.harga = harga; // Mengatur harga baru dari item pakaian
+    }
+    
+    /**
+     * Mendapatkan besaran diskon dari item pakaian.
+     * @return Besaran diskon dari item pakaian.
+     */
+    public double getDiskon() {
+        return diskon;  // Mengembalikan besaran diskon dari item pakaian
+    }
+
+    /**
+     * Mengatur besaran diskon dari item pakaian.
+     * @param diskon Besaran diskon baru dari item pakaian.
+     */
+    public void setDiskon(double diskon) {
+        this.diskon = diskon;   // Mengatur besaran diskon baru dari item pakaian
+    }
+    
+    /**
+     * Menghitung harga setelah diskon dari item pakaian.
+     * @return Harga setelah diskon dari item pakaian.
+     */
+    public double hitungHargaSetelahDiskon() {
+        return harga * (1 - (diskon / 100));   // Mengembalikan harga setelah diskon dari item pakaian
+    }
+    
+    /**
+     * Metode untuk menampilkan detail pakaian (belum diimplementasikan).
+     */
+    public void tampilkanDetailPakaian() {
+        System.out.println();  // Menampilkan detail pakaian ke layar
+    }   
+}
 
