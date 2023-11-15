@@ -6,7 +6,7 @@
      pakaian yang sedang ada promo diskon.
    - Penerapan konsep : Enkapsulasi, Abstraksi, Inheritance, dan Polimorfisme.
 
-     ![image](https://github.com/milalestari/Tugas-4/assets/131256945/6f6773e0-8fe3-487b-8040-d23e98033938)
+![image](https://github.com/milalestari/Tugas-4/assets/131256945/f215f989-72d0-4193-8eb5-d254cc801230)
 
 ### Anggota Kelompok
     1. Elsa Mardhatillah Hariska (2108107010048)
