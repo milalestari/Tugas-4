@@ -28,3 +28,36 @@ public class Pelanggan {
         this.nama = nama;
     }
 }
+
+/**
+ * Kelas JenisPakaian berisi informasi mengenai jenis-jenis pakaian yang tersedia.
+ */
+public class JenisPakaian {
+    private String model;
+    
+    /**
+     * Konstruktor untuk membuat objek JenisPakaian dengan model tertentu.
+     * @param model Model dari jenis pakaian.
+     */
+    public JenisPakaian(String model) {
+        this.model = model;
+    }
+    
+    /**
+     * Mendapatkan model dari jenis pakaian.
+     * @return Model dari jenis pakaian.
+     */
+    public String getModel() {
+        return this.model;
+    }
+    
+    /**
+     * Mengatur model dari jenis pakaian.
+     * @param model Model baru dari jenis pakaian.
+     */
+    public void setModel(String model) {
+        this.model = model;   
+    }    
+}
+
+
