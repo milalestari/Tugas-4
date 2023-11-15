@@ -99,7 +99,7 @@ public class DetailPakaian {
 }
 
 /**
- * Kelas ItemPakaian merepresentasikan sebuah item pakaian yang dipilih oleh pelanggan.
+ * Kelas abstrak ItemPakaian merepresentasikan sebuah item pakaian yang dipilih oleh pelanggan.
  */
 public class ItemPakaian {
     private String nama;    // Nama dari item pakaian
@@ -176,7 +176,13 @@ public class ItemPakaian {
      */
     public void tampilkanDetailPakaian() {
         System.out.println();  // Menampilkan detail pakaian ke layar
-    }   
+    }  
+
+    // Metode abstrak untuk mendapatkan jenis dari item pakaian
+    public abstract String getJenisPakaian();
+    
+    // Metode abstrak untuk mendapatkan detail dari item pakaian
+    public abstract String getDetail();
 }
 
 /**
